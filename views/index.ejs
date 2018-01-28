@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sameer Node App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  </head>
+ <body>
+    <div class="container">  
+     <div class="row">
+     <h1 class="text-center page-header text-primary">Nodejs + ExpressJs + Mongodb </h1>
+     </div>
+     <div class="">
+     <br><br><br><br>
+     <div class="row">
+     <div class="col-md-4"><blockquote>
+        Mongodb + ExpressJs +Nodejs
+        <footer>sameer ahamed</footer>
+      </blockquote></div>
+     <div class="col-md-8 ">
+        <form class="form-inline" action="/quotes" method="POST">
+          <div class="form-group">
+            <label for="email">Website Info:</label>
+            <input type="text" class="form-control" id="" placeholder="" name="name" required>
+          </div>&nbsp;&nbsp;&nbsp;
+          <div class="form-group">
+            <label for="pwd">Websiet Name:</label>
+            <input type="etx" class="form-control" id="" placeholder="" name="quote" required>
+          </div>&nbsp;&nbsp;&nbsp;
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+     </div>
+    </div>
+<br><br>
+     <div class="col-ld-12">
+      <table class="table table-bordered">
+         <thead>
+           <tr class="">
+             <th>NAME</th>
+             <th>WEBSITE NAME</th>
+             <th>VISIT WEBSITE</th>
+           </tr>
+         </thead>
+         <tbody class="text-s">
+           <tr><% for(var i=0; i<quotes.length; i++) {%>
+             <td><%= quotes[i].name %></td>
+             <td><%= quotes[i].quote %></td>
+             <td><a href="<%= quotes[i].quote %>" target="_blank" class="btn btn-info">Visit Website</a></td>
+           </tr><% } %>
+         </tbody>
+      </table>
+     </div>
+      </div>
+<script src="main.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
